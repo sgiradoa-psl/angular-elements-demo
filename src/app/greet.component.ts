@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-greeter',
@@ -6,9 +6,10 @@ import { Component, Input } from '@angular/core';
 })
 export class GreetComponent {
   @Input() name = '';
+  @Output() greet = new EventEmitter<string>();
 
   onGreet() {
-    alert(`Hello ${this.name || 'World'}!`);
+    this.greet.emit(`Hello ${this.name || 'World'}!`);
     this.name = '';
   }
 }
