@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
+  selector: 'app-greeter',
   templateUrl: 'greet.component.html'
 })
 export class GreetComponent {
