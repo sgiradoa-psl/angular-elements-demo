@@ -1,17 +1,19 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>AngularElementsDemo</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-</head>
-<body>
-  <app-greeter id="greeter" greet="2/0" name="Foo"></app-greeter>
-  <script>
-    const greeter = document.getElementById('greeter');
-    greeter.addEventListener('greet', event => alert(event.detail));
-  </script>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <title>AngularElementsDemo</title>
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  </head>
+  <body>
+    <app-greeter id="greeter" greet="2/0" name="Foo">
+      <span>Saluda!</span>
+    </app-greeter>
+    <script>
+      const greeter = document.getElementById("greeter");
+      greeter.addEventListener("greet", event => alert(event.detail));
+    </script>
+  </body>
 </html>

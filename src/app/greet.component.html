@@ -1,1 +1,4 @@
-Name: <input [(ngModel)]="name" /> <button (click)="onGreet()">greet</button>
+Name: <input [(ngModel)]="name" />
+<button (click)="onGreet()">
+  <ng-content></ng-content>
+</button>
